@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 
 export default class App extends React.Component{
   constructor(props){
@@ -13,6 +13,7 @@ export default class App extends React.Component{
     return(
       <View>
         <Text>HELLO</Text>
+        <TextInput multiline={true} />
       </View>
     )
   }
