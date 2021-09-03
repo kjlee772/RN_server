@@ -20,7 +20,7 @@ export default class App extends React.Component{
     );
     this.state={
       db,
-      users: [],
+      users: null,
     }
   }
 
@@ -28,11 +28,17 @@ export default class App extends React.Component{
     console.log("mount")
     const { db } = this.state;
 
+    // db.executeSql('SELECT * FROM info', [], (tx, results) => {
+    //   const data = results.rows.raw().map(v => v);
+    //   console.log(data)
+    // })
+
     db.transaction(tx => {
       tx.executeSql('SELECT * FROM info;', [], (tx, results) => {
         const rows = results.rows;
         const users = rows.raw().map(v => v);
-        this.setState({users});
+        console.log(users)
+        // this.setState({users:rows});
       });
     });
   }
@@ -47,6 +53,7 @@ export default class App extends React.Component{
     return(
       <View>
         <Text>HELLO</Text>
+        {/* <Text>{this.state.users}</Text> */}
       </View>
     )
   }
