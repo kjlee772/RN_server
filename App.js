@@ -28,11 +28,6 @@ export default class App extends React.Component{
     console.log("mount")
     const { db } = this.state;
 
-    // db.executeSql('SELECT * FROM info', [], (tx, results) => {
-    //   const data = results.rows.raw().map(v => v);
-    //   console.log(data)
-    // })
-
     db.transaction(tx => {
       tx.executeSql('SELECT * FROM info;', [], (tx, results) => {
         const rows = results.rows;
@@ -46,6 +41,16 @@ export default class App extends React.Component{
     console.log("unmount")
     const { db } = this.state;
     db.close();
+  }
+
+  save_to_do(){
+    db.transaction(tx => {
+      const instruction = 'SQL 문장';
+      tx.executeSql(instruction, [], (tx, results) => {
+        const rows = results.rows;
+        const data = rows.raw().map(v => v);
+      });
+    });
   }
 
   render(){
