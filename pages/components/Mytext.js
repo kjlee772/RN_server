@@ -1,7 +1,3 @@
-// Example: Example of SQLite Database in React Native
-// https://aboutreact.com/example-of-sqlite-database-in-react-native
-// Custom Text
-
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 

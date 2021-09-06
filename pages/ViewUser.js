@@ -1,7 +1,3 @@
-// Example: Example of SQLite Database in React Native
-// https://aboutreact.com/example-of-sqlite-database-in-react-native
-// Screen to view single user
-
 import React, { useState } from 'react';
 import { Text, View, SafeAreaView } from 'react-native';
 import Mytextinput from './components/Mytextinput';
