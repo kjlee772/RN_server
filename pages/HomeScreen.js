@@ -1,3 +1,5 @@
+// 홈스크린
+
 import React, { useEffect } from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
 import Mybutton from './components/Mybutton';

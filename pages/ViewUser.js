@@ -1,3 +1,5 @@
+// 뷰 컴포넌트
+
 import React, { useState } from 'react';
 import { Text, View, SafeAreaView } from 'react-native';
 import Mytextinput from './components/Mytextinput';

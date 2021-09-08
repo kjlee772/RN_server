@@ -1,3 +1,5 @@
+// 사용자 삭제 컴포넌트
+
 import React, { useState } from 'react';
 import { Text, View, Alert, SafeAreaView } from 'react-native';
 import Mytextinput from './components/Mytextinput';

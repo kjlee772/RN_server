@@ -1,3 +1,5 @@
+// 텍스트입력 컴포넌트
+
 import React from 'react';
 import { View, TextInput } from 'react-native';
 

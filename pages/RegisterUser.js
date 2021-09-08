@@ -1,3 +1,5 @@
+// 사용자 등록 컴포넌트
+
 import React, { useState } from 'react';
 import {
   View,

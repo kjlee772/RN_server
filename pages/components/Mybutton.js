@@ -1,3 +1,5 @@
+// 버튼 컴포넌트
+
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 

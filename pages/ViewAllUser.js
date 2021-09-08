@@ -1,3 +1,5 @@
+// 모든 유저 뷰 컴포넌트
+
 import React, { useState, useEffect } from 'react';
 import { FlatList, Text, View, SafeAreaView } from 'react-native';
 import { openDatabase } from 'react-native-sqlite-storage';
