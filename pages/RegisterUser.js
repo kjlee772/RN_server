@@ -7,7 +7,7 @@ import {
   KeyboardAvoidingView,
   Alert,
   SafeAreaView,
-  Text,
+  Text, Button,
 } from 'react-native';
 import Mytextinput from './components/Mytextinput';
 import Mybutton from './components/Mybutton';
@@ -19,6 +19,15 @@ const RegisterUser = ({ navigation }) => {
   let [userName, setUserName] = useState('');
   let [userContact, setUserContact] = useState('');
   let [userAddress, setUserAddress] = useState('');
+
+  let [num, set_num] = useState('');
+
+  const onIncrease = () => {
+    set_num(pre_num => pre_num + 1);
+  }
+  const onDecrease = () => {
+    set_num(pre_num => pre_num - 1);
+  }
 
   let register_user = () => {
     console.log(userName, userContact, userAddress);
@@ -95,6 +104,11 @@ const RegisterUser = ({ navigation }) => {
                 style={{ textAlignVertical: 'top', padding: 10 }}
               />
               <Mybutton title="Submit" customClick={register_user} />
+
+              <Text>{num}</Text>
+              <Button onPress={onIncrease} title="+1" ></Button>
+              <Button  onPress={onDecrease} title="-1" ></Button>
+
             </KeyboardAvoidingView>
           </ScrollView>
         </View>
