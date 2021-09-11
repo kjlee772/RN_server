@@ -10,7 +10,7 @@ var db = openDatabase({ name: 'UserDatabase.db' });
 
 const HomeScreen = ({ navigation }) => {
   useEffect(() => {
-    db.transaction(function (txn) {
+    db.(function (txn) {
       txn.executeSql(
         "SELECT name FROM sqlite_master WHERE type='table' AND name='table_user'",
         [],
