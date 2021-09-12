@@ -20,14 +20,14 @@ const RegisterUser = ({ navigation }) => {
   let [userContact, setUserContact] = useState('');
   let [userAddress, setUserAddress] = useState('');
 
-  // let [num, set_num] = useState('');
+  let [num, set_num] = useState('');
 
-  // const onIncrease = () => {
-  //   set_num(pre_num => pre_num + 1);
-  // }
-  // const onDecrease = () => {
-  //   set_num(pre_num => pre_num - 1);
-  // }
+  const onIncrease = () => {
+    set_num(pre_num => pre_num + 1);
+  }
+  const onDecrease = () => {
+    set_num(pre_num => pre_num - 1);
+  }
 
   let register_user = () => {
     console.log(userName, userContact, userAddress);
@@ -105,9 +105,9 @@ const RegisterUser = ({ navigation }) => {
               />
               <Mybutton title="Submit" customClick={register_user} />
 
-              {/* <Text>{num}</Text>
+              <Text>{num}</Text>
               <Button onPress={onIncrease} title="+1" ></Button>
-              <Button  onPress={onDecrease} title="-1" ></Button> */}
+              <Button  onPress={onDecrease} title="-1" ></Button>
 
             </KeyboardAvoidingView>
           </ScrollView>
